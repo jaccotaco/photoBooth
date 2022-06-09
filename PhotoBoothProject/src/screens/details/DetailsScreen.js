@@ -47,16 +47,16 @@ const DetailsScreen = (props: Props) => {
                                 <MapView
                                     style={styles.map}
                                     region={{
-                                        latitude: parseInt(props.data.latitude),
-                                        longitude: parseInt(props.data.longitude),
+                                        latitude: parseFloat(props.data.latitude),
+                                        longitude: parseFloat(props.data.longitude),
                                         latitudeDelta: 10,
                                         longitudeDelta: 10,
                                     }}
                                 >
                                     <Marker
                                         coordinate={{
-                                            latitude: parseInt(props.data.latitude),
-                                            longitude: parseInt(props.data.longitude)
+                                            latitude: parseFloat(props.data.latitude),
+                                            longitude: parseFloat(props.data.longitude)
                                         }}/>
 
                                 </MapView> :

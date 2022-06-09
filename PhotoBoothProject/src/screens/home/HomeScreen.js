@@ -9,7 +9,11 @@ import {BarIndicator} from 'react-native-indicators'
 
 
 const HomeScreen = () => {
-    const {data, loading, refetch} = useFetch("https://api.openbrewerydb.org/breweries?per_page=3")
+    const {data, loading, refetch, error} = useFetch("https://api.openbrewerydb.org/breweries?per_page=3")
+
+    if (error) {
+        console.log(error)
+    }
 
     const refresh = () => {
         refetch(Math.floor(Math.random() * 20))
